@@ -1,0 +1,68 @@
+[gd_scene load_steps=7 format=3 uid="uid://cmroh6ct6sgp7"]
+
+[ext_resource type="Script" uid="uid://rsf5djp7jvyc" path="res://addons/godot_ui_framework/examples/core_demo/widgets/game/battle_log_container.gd" id="1_qfbyc"]
+[ext_resource type="Script" uid="uid://1mpayve22prh" path="res://addons/godot_ui_framework/source/core/components/ui_widget_component.gd" id="2_eivxp"]
+[ext_resource type="Script" uid="uid://cwol0omsjqlwy" path="res://addons/godot_ui_framework/source/core/resource/ui_view_type.gd" id="3_86xd7"]
+[ext_resource type="Script" uid="uid://c6ba7chc4lqax" path="res://addons/godot_ui_framework/source/core/data/ui_data_model.gd" id="4_86xd7"]
+
+[sub_resource type="Resource" id="Resource_ycgcd"]
+script = ExtResource("3_86xd7")
+ID = &""
+scene_path = ""
+preload_mode = 0
+cache_mode = 1
+pool_capacity = 10
+
+[sub_resource type="Resource" id="Resource_egc01"]
+script = ExtResource("4_86xd7")
+data_paths = Array[String]([])
+_data = {}
+_watchers = Dictionary[String, Array]({})
+
+[node name="BattleLogContainer" type="MarginContainer"]
+custom_minimum_size = Vector2(255, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -127.5
+offset_top = -69.5
+offset_right = 127.5
+offset_bottom = 69.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qfbyc")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Scroll" type="ScrollContainer" parent="MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="LogText" type="RichTextLabel" parent="MarginContainer/Scroll"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "测试战斗日志显示信息！"
+fit_content = true
+
+[node name="UIWidgetComponent" type="Node" parent="."]
+script = ExtResource("2_eivxp")
+config = SubResource("Resource_ycgcd")
+data_model = SubResource("Resource_egc01")
+metadata/_custom_type_script = ExtResource("2_eivxp")
+
+[connection signal="initialized" from="." to="." method="_on_initialized"]

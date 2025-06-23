@@ -1,0 +1,75 @@
+[gd_scene load_steps=8 format=3 uid="uid://bhn1g0j8mk134"]
+
+[ext_resource type="Script" uid="uid://b7sjxwnb05xxl" path="res://addons/godot_ui_framework/examples/core_demo/widgets/game/character_status.gd" id="1_6pjfs"]
+[ext_resource type="PackedScene" uid="uid://co631yynxaumm" path="res://addons/godot_ui_framework/examples/core_demo/widgets/game/status_progress_bar.tscn" id="1_mf70p"]
+[ext_resource type="Script" uid="uid://1mpayve22prh" path="res://addons/godot_ui_framework/source/core/components/ui_widget_component.gd" id="3_6kktp"]
+[ext_resource type="Script" uid="uid://cwol0omsjqlwy" path="res://addons/godot_ui_framework/source/core/resource/ui_view_type.gd" id="4_2moyb"]
+[ext_resource type="Script" uid="uid://c6ba7chc4lqax" path="res://addons/godot_ui_framework/source/core/data/ui_data_model.gd" id="5_2moyb"]
+
+[sub_resource type="Resource" id="Resource_6sdmd"]
+script = ExtResource("4_2moyb")
+ID = &""
+scene_path = ""
+preload_mode = 0
+cache_mode = 1
+pool_capacity = 10
+
+[sub_resource type="Resource" id="Resource_pnvq6"]
+script = ExtResource("5_2moyb")
+data_paths = Array[String]([])
+_data = {}
+_watchers = Dictionary[String, Array]({})
+
+[node name="CharacterStatus" type="MarginContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_6pjfs")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "角色名"
+
+[node name="LevelLabel" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Lv.99"
+
+[node name="HPBar" parent="MarginContainer/VBoxContainer" instance=ExtResource("1_mf70p")]
+unique_name_in_owner = true
+layout_mode = 2
+character_type = "player"
+status_type = "health"
+
+[node name="MPBar" parent="MarginContainer/VBoxContainer" instance=ExtResource("1_mf70p")]
+unique_name_in_owner = true
+layout_mode = 2
+character_type = "player"
+progress_color = Color(0.0392157, 0.0705882, 1, 1)
+
+[node name="UIWidgetComponent" type="Node" parent="."]
+script = ExtResource("3_6kktp")
+config = SubResource("Resource_6sdmd")
+data_model = SubResource("Resource_pnvq6")
+metadata/_custom_type_script = ExtResource("3_6kktp")
+
+[connection signal="initialized" from="UIWidgetComponent" to="." method="_on_ui_widget_component_initialized"]

@@ -1,0 +1,65 @@
+[gd_scene load_steps=8 format=3 uid="uid://cxbyew4sgn1m7"]
+
+[ext_resource type="Texture2D" uid="uid://ct1s4put6p2l4" path="res://icon.svg" id="1_12x1p"]
+[ext_resource type="Script" uid="uid://b3ncmcdnb2y6y" path="res://addons/godot_ui_framework/examples/core_demo/widgets/labby/shop_item.gd" id="1_vyy1q"]
+[ext_resource type="Script" uid="uid://1mpayve22prh" path="res://addons/godot_ui_framework/source/core/components/ui_widget_component.gd" id="3_xpbv2"]
+[ext_resource type="Script" uid="uid://ccoyeqfqodquq" path="res://addons/godot_ui_framework/source/core/resource/ui_widget_type.gd" id="4_vyy1q"]
+[ext_resource type="Script" uid="uid://c6ba7chc4lqax" path="res://addons/godot_ui_framework/source/core/data/ui_data_model.gd" id="5_xco31"]
+
+[sub_resource type="Resource" id="Resource_xpbv2"]
+script = ExtResource("4_vyy1q")
+ID = &"shop_item"
+scene_path = ""
+preload_mode = 0
+cache_mode = 1
+pool_capacity = 10
+metadata/_custom_type_script = ExtResource("4_vyy1q")
+
+[sub_resource type="Resource" id="Resource_5ex76"]
+script = ExtResource("5_xco31")
+data_paths = Array[String](["slot_index", "selected_index"])
+_data = {}
+_watchers = Dictionary[String, Array]({})
+metadata/_custom_type_script = ExtResource("5_xco31")
+
+[node name="ShopItem" type="MarginContainer"]
+script = ExtResource("1_vyy1q")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("1_12x1p")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+text = "12"
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/MarginContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "￥99"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UIWidgetComponent" type="Node" parent="."]
+script = ExtResource("3_xpbv2")
+config = SubResource("Resource_xpbv2")
+data_model = SubResource("Resource_5ex76")
+metadata/_custom_type_script = ExtResource("3_xpbv2")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="disposing" from="UIWidgetComponent" to="." method="_on_ui_widget_component_disposing"]
+[connection signal="initialized" from="UIWidgetComponent" to="." method="_on_ui_widget_component_initialized"]
+[connection signal="updated" from="UIWidgetComponent" to="." method="_on_ui_widget_component_updated"]

@@ -1,0 +1,153 @@
+[gd_scene load_steps=11 format=3 uid="uid://ov7snxt5cvvf"]
+
+[ext_resource type="PackedScene" uid="uid://cxbyew4sgn1m7" path="res://addons/godot_ui_framework/examples/core_demo/widgets/labby/shop_item.tscn" id="1_28f66"]
+[ext_resource type="Script" uid="uid://5p628df06nqf" path="res://addons/godot_ui_framework/examples/core_demo/scenes/lobby_scene/shop_panel.gd" id="1_l4qm2"]
+[ext_resource type="Script" uid="uid://dod05jn2u0pey" path="res://addons/godot_ui_framework/source/core/components/ui_scene_component.gd" id="2_dx08s"]
+[ext_resource type="Script" uid="uid://cwol0omsjqlwy" path="res://addons/godot_ui_framework/source/core/resource/ui_view_type.gd" id="4_m0rwa"]
+[ext_resource type="Script" uid="uid://ccoyeqfqodquq" path="res://addons/godot_ui_framework/source/core/resource/ui_widget_type.gd" id="5_j8j5o"]
+[ext_resource type="Script" uid="uid://cdtge4wnkvm45" path="res://addons/godot_ui_framework/source/core/resource/ui_scene_type.gd" id="6_j8j5o"]
+[ext_resource type="Script" uid="uid://c6ba7chc4lqax" path="res://addons/godot_ui_framework/source/core/data/ui_data_model.gd" id="6_m0rwa"]
+
+[sub_resource type="Resource" id="Resource_hcnj7"]
+script = ExtResource("5_j8j5o")
+ID = &"shop_item"
+scene_path = "uid://cxbyew4sgn1m7"
+preload_mode = 1
+cache_mode = 1
+pool_capacity = 10
+metadata/_custom_type_script = ExtResource("5_j8j5o")
+
+[sub_resource type="Resource" id="Resource_hdfov"]
+script = ExtResource("6_j8j5o")
+group_id = &""
+layer = 0
+transition_name = &""
+hide_others = false
+modal = false
+ID = &"shop_panel"
+scene_path = ""
+preload_mode = 0
+cache_mode = 1
+pool_capacity = 10
+metadata/_custom_type_script = ExtResource("6_j8j5o")
+
+[sub_resource type="Resource" id="Resource_j8j5o"]
+script = ExtResource("6_m0rwa")
+data_paths = Array[String]([])
+_data = {}
+_watchers = Dictionary[String, Array]({})
+metadata/_custom_type_script = ExtResource("6_m0rwa")
+
+[node name="ShopPanel" type="MarginContainer"]
+size_flags_horizontal = 4
+script = ExtResource("1_l4qm2")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ButtonHot" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "商店热卖"
+
+[node name="ButtonItem" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "道具商城"
+
+[node name="ButtonGift" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "礼包商城"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+columns = 6
+
+[node name="ShopItem" parent="MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("1_28f66")]
+layout_mode = 2
+
+[node name="ShopItem2" parent="MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("1_28f66")]
+layout_mode = 2
+
+[node name="ShopItem3" parent="MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("1_28f66")]
+layout_mode = 2
+
+[node name="ShopItem4" parent="MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("1_28f66")]
+layout_mode = 2
+
+[node name="ShopItem5" parent="MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("1_28f66")]
+layout_mode = 2
+
+[node name="ShopItem6" parent="MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("1_28f66")]
+layout_mode = 2
+
+[node name="ShopItem7" parent="MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("1_28f66")]
+layout_mode = 2
+
+[node name="ShopItem8" parent="MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("1_28f66")]
+layout_mode = 2
+
+[node name="ShopItem9" parent="MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("1_28f66")]
+layout_mode = 2
+
+[node name="ShopItem10" parent="MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("1_28f66")]
+layout_mode = 2
+
+[node name="ShopItem11" parent="MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("1_28f66")]
+layout_mode = 2
+
+[node name="ShopItem12" parent="MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("1_28f66")]
+layout_mode = 2
+
+[node name="ShopItem13" parent="MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("1_28f66")]
+layout_mode = 2
+
+[node name="ShopItem14" parent="MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("1_28f66")]
+layout_mode = 2
+
+[node name="ShopItem15" parent="MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("1_28f66")]
+layout_mode = 2
+
+[node name="ShopItem16" parent="MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("1_28f66")]
+layout_mode = 2
+
+[node name="ShopItem17" parent="MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("1_28f66")]
+layout_mode = 2
+
+[node name="ShopItem18" parent="MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("1_28f66")]
+layout_mode = 2
+
+[node name="ShopItem19" parent="MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("1_28f66")]
+layout_mode = 2
+
+[node name="UISceneComponent" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_dx08s")
+view_types = Array[ExtResource("4_m0rwa")]([SubResource("Resource_hcnj7")])
+config = SubResource("Resource_hdfov")
+data_model = SubResource("Resource_j8j5o")
+metadata/_custom_type_script = ExtResource("2_dx08s")
+
+[connection signal="disposing" from="UISceneComponent" to="." method="_on_ui_scene_component_disposing"]
+[connection signal="updated" from="UISceneComponent" to="." method="_on_ui_scene_component_updated"]

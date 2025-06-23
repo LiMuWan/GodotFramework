@@ -1,0 +1,100 @@
+[gd_scene load_steps=13 format=3 uid="uid://c56s2t71il4os"]
+
+[ext_resource type="Script" uid="uid://b5ujn1ntx2its" path="res://addons/godot_ui_framework/examples/core_demo/scenes/game_scene.gd" id="1_ua1ap"]
+[ext_resource type="Script" uid="uid://dod05jn2u0pey" path="res://addons/godot_ui_framework/source/core/components/ui_scene_component.gd" id="2_s1qkn"]
+[ext_resource type="PackedScene" uid="uid://c0k22an14hpxm" path="res://addons/godot_ui_framework/examples/core_demo/widgets/game/turn_indicator.tscn" id="3_ocqvj"]
+[ext_resource type="Script" uid="uid://cwol0omsjqlwy" path="res://addons/godot_ui_framework/source/core/resource/ui_view_type.gd" id="4_knaal"]
+[ext_resource type="PackedScene" uid="uid://bhn1g0j8mk134" path="res://addons/godot_ui_framework/examples/core_demo/widgets/game/character_status.tscn" id="4_t8t8m"]
+[ext_resource type="PackedScene" uid="uid://cmroh6ct6sgp7" path="res://addons/godot_ui_framework/examples/core_demo/widgets/game/battle_log_container.tscn" id="5_7osvk"]
+[ext_resource type="PackedScene" uid="uid://d34rmdtbdyjkj" path="res://addons/godot_ui_framework/examples/core_demo/widgets/game/skill_buttons.tscn" id="6_afy4p"]
+[ext_resource type="Script" uid="uid://c6ba7chc4lqax" path="res://addons/godot_ui_framework/source/core/data/ui_data_model.gd" id="8_knaal"]
+
+[sub_resource type="Resource" id="Resource_4sgs7"]
+script = ExtResource("4_knaal")
+
+[sub_resource type="Resource" id="Resource_8fmig"]
+script = ExtResource("4_knaal")
+
+[sub_resource type="Resource" id="Resource_e3wjh"]
+script = ExtResource("4_knaal")
+
+[sub_resource type="Resource" id="Resource_1f1p1"]
+script = ExtResource("8_knaal")
+
+[node name="GameScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ua1ap")
+
+[node name="TurnIndicator" parent="." instance=ExtResource("3_ocqvj")]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = -72.0
+offset_right = 72.0
+
+[node name="PlayerStatus" parent="." instance=ExtResource("4_t8t8m")]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -292.0
+offset_right = 220.0
+offset_bottom = -205.0
+grow_vertical = 0
+
+[node name="UIWidgetComponent" parent="PlayerStatus" index="2"]
+config = SubResource("Resource_4sgs7")
+metadata/_custom_type_script = "uid://1mpayve22prh"
+
+[node name="EnemyStatus" parent="." instance=ExtResource("4_t8t8m")]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -220.0
+offset_top = -292.0
+offset_right = -10.0
+offset_bottom = -205.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="HPBar" parent="EnemyStatus/MarginContainer/VBoxContainer" index="1"]
+character_type = "enemy"
+
+[node name="MPBar" parent="EnemyStatus/MarginContainer/VBoxContainer" index="2"]
+character_type = "enemy"
+
+[node name="UIWidgetComponent" parent="EnemyStatus" index="2"]
+config = SubResource("Resource_8fmig")
+metadata/_custom_type_script = "uid://1mpayve22prh"
+
+[node name="BattleLogContainer" parent="." instance=ExtResource("5_7osvk")]
+unique_name_in_owner = true
+layout_mode = 1
+offset_top = -32.0
+offset_bottom = 107.0
+
+[node name="SkillButtons" parent="." instance=ExtResource("6_afy4p")]
+unique_name_in_owner = true
+layout_mode = 1
+
+[node name="UISceneComponent" type="Node" parent="."]
+script = ExtResource("2_s1qkn")
+config = SubResource("Resource_e3wjh")
+data_model = SubResource("Resource_1f1p1")
+metadata/_custom_type_script = "uid://dod05jn2u0pey"
+
+[connection signal="initialized" from="UISceneComponent" to="." method="_on_ui_scene_component_initialized"]
+[connection signal="updated" from="UISceneComponent" to="." method="_on_ui_scene_component_updated"]
+
+[editable path="PlayerStatus"]
+[editable path="EnemyStatus"]

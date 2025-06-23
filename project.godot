@@ -1,0 +1,47 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="MyGame"
+run/main_scene="uid://riqfmggkqpfd"
+config/features=PackedStringArray("4.5", "Mobile")
+config/icon="res://icon.svg"
+
+[autoload]
+
+CoreSystem="*res://addons/godot_core_system/source/core_system.gd"
+UiManager="*res://addons/godot_ui_framework/source/ui_manager.gd"
+UIManager="*res://addons/godot_ui_framework/source/ui_manager.gd"
+
+[dotnet]
+
+project/assembly_name="MyGame"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_core_system/plugin.cfg", "res://addons/godot_ui_framework/plugin.cfg", "res://addons/gut/plugin.cfg")
+
+[godot_ui_framework]
+
+modules={}
+modules/theme/enabled=true
+modules/transition/enabled=true
+modules/adaptation/enabled=true
+modules/localization/enabled=true
+module/theme/enabled=true
+module/transition/enabled=true
+module/adaptation/enabled=true
+module/localization/enabled=true
+debug/enable_ui_debugger=true
+
+[rendering]
+
+renderer/rendering_method="mobile"
