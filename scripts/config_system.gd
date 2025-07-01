@@ -38,7 +38,7 @@ func initialize():
 	if _is_initialized:
 		return
 		
-	_tables = Tables.new(Callable(self, "load_json"))
+	_tables = Tables.new(Callable(self, "load_csv"))
 	_is_initialized = true
 	print("ConfigSystem initialized successfully.")
 		

@@ -35,4 +35,3 @@ func _to_string() -> String:
 	sb += "level_required: " + str(level_required) + "\n"
 	sb += "--------------------"
 	return sb
-

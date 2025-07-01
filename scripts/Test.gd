@@ -5,7 +5,8 @@ func _ready():
 	ConfigSystem.get_instance().initialize()
 	
 	# 获取配置
-	var config = ConfigSystem.get_tables().get_tb_character_skills_config().get_by_id(1)
-	
+	var tb_characterskillsconfig = ConfigSystem.get_tables().tb_characterskillsconfig.get_by_id(1)
+	var tb_equipmentconfig = ConfigSystem.get_tables().tb_equipmentconfig.get_by_id(1)
 	# 输出配置信息
-	print("TbCharacterSkillsConfig data = " + str(config))
+	print("TbCharacterSkillsConfig data = " + str(tb_characterskillsconfig))
+	print("TbCharacterSkillsConfig data = " + str(tb_equipmentconfig))

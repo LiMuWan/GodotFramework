@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://bxmfmef501ox2"
+
+[deps]
+
+files=["res://resources/configs/languages/Chinese.Value.translation"]
+
+source_file="res://resources/configs/languages/Chinese.csv"
+dest_files=["res://resources/configs/languages/Chinese.Value.translation"]
+
+[params]
+
+compress=true
+delimiter=0
