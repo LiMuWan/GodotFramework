@@ -63,4 +63,3 @@ func _to_string() -> String:
 	sb += "is_available: " + str(is_available) + "\n"
 	sb += "--------------------"
 	return sb
-
