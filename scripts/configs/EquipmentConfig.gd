@@ -1,8 +1,7 @@
-extends RefCounted # Or your base class
+extends BaseEntity
 
 class_name EquipmentConfig
 
-var id: int
 var name: String
 var type: String
 var rarity: String
@@ -11,8 +10,7 @@ var level_required: int
 
 func _init(data = null):
 	if data != null and data is Dictionary:
-		if data.has("id"):
-			id = data.id
+		super._init(data) # Call base class constructor to initialize 'id'
 		if data.has("name"):
 			name = data.name
 		if data.has("type"):
@@ -23,4 +21,18 @@ func _init(data = null):
 			power = data.power
 		if data.has("level_required"):
 			level_required = data.level_required
+
+
+# Returns a string representation of the object for debugging.
+func _to_string() -> String:
+	var sb = ""
+	sb += "--- EquipmentConfig Object ---\n"
+	sb += "id: " + str(id) + "\n"
+	sb += "name: " + (name if name != null else "null") + "\n"
+	sb += "type: " + (type if type != null else "null") + "\n"
+	sb += "rarity: " + (rarity if rarity != null else "null") + "\n"
+	sb += "power: " + str(power) + "\n"
+	sb += "level_required: " + str(level_required) + "\n"
+	sb += "--------------------"
+	return sb
 
