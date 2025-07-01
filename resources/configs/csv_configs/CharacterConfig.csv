@@ -1,0 +1,5 @@
+id,name,speed,max_speed,damage,crit
+1,Shooter,100,15232,100,0.5
+2,Warrior,80,14000,120,0.3
+3,Mage,70,13000,150,0.6
+4,Assassin,120,16000,90,0.7
