@@ -6,7 +6,7 @@ var _data_map: Dictionary
 var _data_list: Array
 
 func _init(content: String):
-	_data_map = CsvHelper.parse_dictionary(content, "EquipmentConfig")
+	_data_map = JsonHelper.parse_dictionary(content, "EquipmentConfig")
 	_data_list = _data_map.values()
 
 func get_data_map() -> Dictionary:

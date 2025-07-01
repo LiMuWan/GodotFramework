@@ -35,3 +35,4 @@ func _to_string() -> String:
 	sb += "crit: " + str(crit) + "\n"
 	sb += "--------------------"
 	return sb
+

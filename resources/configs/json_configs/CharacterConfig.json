@@ -26,8 +26,8 @@
     "4": {
         "id": 4,
         "name": "Assassin",
-        "speed": 120,
-        "max_speed": 16000,
+        "speed": 1201,
+        "max_speed": 10002,
         "damage": 90,
         "crit": 0.7
     }
