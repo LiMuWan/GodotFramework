@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://b6amhk6t5dsa5"
+
+[deps]
+
+files=["res://resources/configs/csv_configs/CharacterSkillsConfig.name.translation", "res://resources/configs/csv_configs/CharacterSkillsConfig.skills.translation", "res://resources/configs/csv_configs/CharacterSkillsConfig.max.translation", "res://resources/configs/csv_configs/CharacterSkillsConfig.damage.translation", "res://resources/configs/csv_configs/CharacterSkillsConfig.crit.translation", "res://resources/configs/csv_configs/CharacterSkillsConfig.skill.translation", "res://resources/configs/csv_configs/CharacterSkillsConfig.skill.translation", "res://resources/configs/csv_configs/CharacterSkillsConfig.skill.translation", "res://resources/configs/csv_configs/CharacterSkillsConfig.is.translation"]
+
+source_file="res://resources/configs/csv_configs/CharacterSkillsConfig.csv"
+dest_files=["res://resources/configs/csv_configs/CharacterSkillsConfig.name.translation", "res://resources/configs/csv_configs/CharacterSkillsConfig.skills.translation", "res://resources/configs/csv_configs/CharacterSkillsConfig.max.translation", "res://resources/configs/csv_configs/CharacterSkillsConfig.damage.translation", "res://resources/configs/csv_configs/CharacterSkillsConfig.crit.translation", "res://resources/configs/csv_configs/CharacterSkillsConfig.skill.translation", "res://resources/configs/csv_configs/CharacterSkillsConfig.skill.translation", "res://resources/configs/csv_configs/CharacterSkillsConfig.skill.translation", "res://resources/configs/csv_configs/CharacterSkillsConfig.is.translation"]
+
+[params]
+
+compress=true
+delimiter=0
