@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://0c3636eyigpb"
+
+[deps]
+
+files=["res://resources/configs/csv_configs/CharacterConfig.name.translation", "res://resources/configs/csv_configs/CharacterConfig.speed.translation", "res://resources/configs/csv_configs/CharacterConfig.max.translation", "res://resources/configs/csv_configs/CharacterConfig.damage.translation", "res://resources/configs/csv_configs/CharacterConfig.crit.translation"]
+
+source_file="res://resources/configs/csv_configs/CharacterConfig.csv"
+dest_files=["res://resources/configs/csv_configs/CharacterConfig.name.translation", "res://resources/configs/csv_configs/CharacterConfig.speed.translation", "res://resources/configs/csv_configs/CharacterConfig.max.translation", "res://resources/configs/csv_configs/CharacterConfig.damage.translation", "res://resources/configs/csv_configs/CharacterConfig.crit.translation"]
+
+[params]
+
+compress=true
+delimiter=0

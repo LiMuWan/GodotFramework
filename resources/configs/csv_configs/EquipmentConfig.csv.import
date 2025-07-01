@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://da22jjgxsbv4o"
+
+[deps]
+
+files=["res://resources/configs/csv_configs/EquipmentConfig.name.translation", "res://resources/configs/csv_configs/EquipmentConfig.type.translation", "res://resources/configs/csv_configs/EquipmentConfig.rarity.translation", "res://resources/configs/csv_configs/EquipmentConfig.power.translation", "res://resources/configs/csv_configs/EquipmentConfig.level.translation"]
+
+source_file="res://resources/configs/csv_configs/EquipmentConfig.csv"
+dest_files=["res://resources/configs/csv_configs/EquipmentConfig.name.translation", "res://resources/configs/csv_configs/EquipmentConfig.type.translation", "res://resources/configs/csv_configs/EquipmentConfig.rarity.translation", "res://resources/configs/csv_configs/EquipmentConfig.power.translation", "res://resources/configs/csv_configs/EquipmentConfig.level.translation"]
+
+[params]
+
+compress=true
+delimiter=0

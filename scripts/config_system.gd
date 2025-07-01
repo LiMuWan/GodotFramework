@@ -51,13 +51,28 @@ func load_csv(file_name: String) -> String:
 	return load_config_file(CSV_CONFIG_PATH, file_name,".csv")
 	
 # 通用配置文件加载方法
-func load_config_file(base_path: String, file_name: String,file_extension:String) -> String:
+func load_config_file(base_path: String, file_name: String, file_extension: String) -> String:
 	if file_name.is_empty():
-		push_error("File name cannot be null or empty")
+		push_error("File name cannot be empty")
 		return ""
-	var resource_manager:UIResourceManager = UIResourceManager.new()
-	# Load resource
-	var full_path = base_path + file_name + file_extension
-	var file = resource_manager.load_resource(full_path)	
-	var content = str(file.data)
+	
+	var content: String = ""
+	var full_path: String = base_path + file_name + file_extension
+	
+	if full_path.ends_with(".json"):
+		var resource_manager := UIResourceManager.new()
+		var resource = resource_manager.load_resource(full_path)
+		if resource:
+			content = str(resource.data)
+		else:
+			push_error("Failed to load JSON resource: " + full_path)
+			
+	elif full_path.ends_with(".csv"):
+		# 注意：这里假设 CsvReader.load_csv_text 接收的是文件名（不含路径和扩展名）
+		# 如果它接收的是完整路径，请使用 CsvReader.load_csv_text_from_path(full_path)
+		content = CsvReader.load_csv_text(full_path)
+		
+	else:
+		print("Unsupported file format: " + file_extension)
+		
 	return content
