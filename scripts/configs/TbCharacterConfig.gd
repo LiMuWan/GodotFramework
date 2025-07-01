@@ -1,12 +1,12 @@
 extends RefCounted
 
-class_name TbCharacterSkillsConfig
+class_name TbCharacterConfig
 
 var _data_map: Dictionary
 var _data_list: Array
 
 func _init(content: String):
-	_data_map = JsonHelper.parse_dictionary(content, "CharacterSkillsConfig", "id")
+	_data_map = JsonHelper.parse_dictionary(content, "CharacterConfig", "id")
 	_data_list = _data_map.values()
 
 func get_data_map() -> Dictionary:
@@ -21,5 +21,5 @@ func get_or_default(key):
 func get_by_id(key):
 	if _data_map.has(key):
 		return _data_map[key]
-	push_error("In TbCharacterSkillsConfig: Key not found: " + str(key))
+	push_error("In TbCharacterConfig: Key not found: " + str(key))
 	return null

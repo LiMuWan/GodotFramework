@@ -1,0 +1,34 @@
+{
+    "1": {
+        "id": 1,
+        "name": "Dragon Sword",
+        "type": "Weapon",
+        "rarity": "Epic",
+        "power": 250,
+        "level_required": 10
+    },
+    "2": {
+        "id": 2,
+        "name": "Magic Staff",
+        "type": "Weapon",
+        "rarity": "Rare",
+        "power": 200,
+        "level_required": 8
+    },
+    "3": {
+        "id": 3,
+        "name": "Shield of Valor",
+        "type": "Armor",
+        "rarity": "Legendary",
+        "power": 300,
+        "level_required": 12
+    },
+    "4": {
+        "id": 4,
+        "name": "Boots of Speed",
+        "type": "Accessory",
+        "rarity": "Common",
+        "power": 100,
+        "level_required": 5
+    }
+}

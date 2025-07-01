@@ -2,13 +2,20 @@ extends RefCounted
 
 class_name Tables
 
-var _tb_character_skills_config: TbCharacterSkillsConfig
+var tb_characterconfig: TbCharacterConfig
+var tb_equipmentconfig: TbEquipmentConfig
+var tb_characterskillsconfig: TbCharacterSkillsConfig
 
-# 初始化，接收加载函数引用
 func _init(loader):
-	# 加载角色技能配置
-	var content = loader.call("CharacterSkillsConfig")
-	_tb_character_skills_config = TbCharacterSkillsConfig.new(content)
-	
-func get_tb_character_skills_config() -> TbCharacterSkillsConfig:
-	return _tb_character_skills_config
+	tb_characterconfig = TbCharacterConfig.new(loader.call("CharacterConfig"))
+	tb_equipmentconfig = TbEquipmentConfig.new(loader.call("EquipmentConfig"))
+	tb_characterskillsconfig = TbCharacterSkillsConfig.new(loader.call("CharacterSkillsConfig"))
+
+func get_tb_characterconfig() -> TbCharacterConfig:
+	return tb_characterconfig
+
+func get_tb_equipmentconfig() -> TbEquipmentConfig:
+	return tb_equipmentconfig
+
+func get_tb_characterskillsconfig() -> TbCharacterSkillsConfig:
+	return tb_characterskillsconfig

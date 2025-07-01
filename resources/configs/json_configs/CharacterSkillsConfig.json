@@ -1,94 +1,94 @@
 {
-	"1": {
-		"id": 1,
-		"name": "Shooter",
-		"skills": [
-			"Fireball",
+    "1": {
+        "id": 1,
+        "name": "Shooter",
+        "skills": [
+            "Fireball",
             "Rapid Shot"
-		],
-		"max_speed": 15232,
-		"damage": 10,
-		"crit": 0.5,
-		"skill_cooldowns": [
-			0
-		],
-		"skill_costs": [
-			40,
-			20
-		],
-		"skill_types": [
-			"Magic",
+        ],
+        "max_speed": 15232,
+        "damage": 10,
+        "crit": 0.5,
+        "skill_cooldowns": [
+            0
+        ],
+        "skill_costs": [
+            40,
+            20
+        ],
+        "skill_types": [
+            "Magic",
             "Physical"
-		],
-		"is_available": true
-	},
-	"2": {
-		"id": 2,
-		"name": "Warrior",
-		"skills": [
-			"Shield Bash",
+        ],
+        "is_available": true
+    },
+    "2": {
+        "id": 2,
+        "name": "Warrior",
+        "skills": [
+            "Shield Bash",
             "Charge"
-		],
-		"max_speed": 14000,
-		"damage": 15,
-		"crit": 0.3,
-		"skill_cooldowns": [
-			0
-		],
-		"skill_costs": [
-			30,
-			10
-		],
-		"skill_types": [
-			"Physical",
+        ],
+        "max_speed": 14000,
+        "damage": 15,
+        "crit": 0.3,
+        "skill_cooldowns": [
+            0
+        ],
+        "skill_costs": [
+            30,
+            10
+        ],
+        "skill_types": [
+            "Physical",
             "Physical"
-		],
-		"is_available": true
-	},
-	"3": {
-		"id": 3,
-		"name": "Mage",
-		"skills": [
-			"Fireball",
+        ],
+        "is_available": true
+    },
+    "3": {
+        "id": 3,
+        "name": "Mage",
+        "skills": [
+            "Fireball",
             "Ice Blast"
-		],
-		"max_speed": 13001,
-		"damage": 12,
-		"crit": 0.6,
-		"skill_cooldowns": [
-			0
-		],
-		"skill_costs": [
-			50,
-			30
-		],
-		"skill_types": [
-			"Magic",
+        ],
+        "max_speed": 13001,
+        "damage": 12,
+        "crit": 0.6,
+        "skill_cooldowns": [
+            0
+        ],
+        "skill_costs": [
+            50,
+            30
+        ],
+        "skill_types": [
+            "Magic",
             "Magic"
-		],
-		"is_available": false
-	},
-	"4": {
-		"id": 4,
-		"name": "Assassin",
-		"skills": [
-			"Stealth",
+        ],
+        "is_available": false
+    },
+    "4": {
+        "id": 4,
+        "name": "Assassin",
+        "skills": [
+            "Stealth",
             "Backstab"
-		],
-		"max_speed": 16000,
-		"damage": 20,
-		"crit": 0.7,
-		"skill_cooldowns": [
-			0
-		],
-		"skill_costs": [
-			20,
-			40
-		],
-		"skill_types": [
-			"Utility",
+        ],
+        "max_speed": 16000,
+        "damage": 20,
+        "crit": 0.7,
+        "skill_cooldowns": [
+            0
+        ],
+        "skill_costs": [
+            20,
+            40
+        ],
+        "skill_types": [
+            "Utility",
             "Physical"
-		],
-		"is_available": true
-	}
+        ],
+        "is_available": true
+    }
 }

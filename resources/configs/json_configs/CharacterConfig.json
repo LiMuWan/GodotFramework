@@ -1,0 +1,34 @@
+{
+    "1": {
+        "id": 1,
+        "name": "Shooter",
+        "speed": 100,
+        "max_speed": 15232,
+        "damage": 100,
+        "crit": 0.5
+    },
+    "2": {
+        "id": 2,
+        "name": "Warrior",
+        "speed": 80,
+        "max_speed": 14000,
+        "damage": 120,
+        "crit": 0.3
+    },
+    "3": {
+        "id": 3,
+        "name": "Mage",
+        "speed": 70,
+        "max_speed": 13000,
+        "damage": 150,
+        "crit": 0.6
+    },
+    "4": {
+        "id": 4,
+        "name": "Assassin",
+        "speed": 120,
+        "max_speed": 16000,
+        "damage": 90,
+        "crit": 0.7
+    }
+}
