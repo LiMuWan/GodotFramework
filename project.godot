@@ -36,11 +36,6 @@ modules/theme/enabled=true
 modules/transition/enabled=true
 modules/adaptation/enabled=true
 modules/localization/enabled=true
-module/theme/enabled=true
-module/transition/enabled=true
-module/adaptation/enabled=true
-module/localization/enabled=true
-debug/enable_ui_debugger=true
 
 [rendering]
 
